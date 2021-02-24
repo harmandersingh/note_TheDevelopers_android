@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditActivity"
+    android:background="@color/bb">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+            <FrameLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/disimage"
+
+                        android:src="@drawable/image"
+                        android:layout_marginLeft="150dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:text="Select an Image"
+                        android:id="@+id/selctimage"
+                        android:layout_gravity="center"
+                        android:layout_below="@id/disimage"
+                        android:layout_marginLeft="150dp"
+                        android:textColor="@color/black"/>
+
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+
+                        android:src="@drawable/ic_baseline_audiotrack_24_2"
+                        android:layout_toRightOf="@id/disimage"
+
+                        android:layout_marginTop="25dp"/>
+
+
+
+                </RelativeLayout>
+
+
+
+
+            </FrameLayout>
+            <EditText
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textSize="24sp"
+                android:padding="12dp"
+                android:hint="Title"
+
+                android:textColorHint="@color/day"
+
+                android:layout_marginRight="20dp"
+                android:background="@drawable/corner_color"
+                android:id="@+id/dtitle"
+                />
+
+            <EditText
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textSize="24sp"
+                android:padding="12dp"
+                android:hint="Subject"
+
+                android:textColorHint="@color/day"
+
+                android:layout_marginRight="20dp"
+                android:background="@drawable/corner_color"
+                android:id="@+id/dsubject"
+                />
+
+            <FrameLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/corner_new">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit"
+                    android:hint="Notes"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/day"
+                    android:textSize="24sp"
+                    android:id="@+id/dnotes"
+                    android:maxLines="20"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+
+            </FrameLayout>
+
+            <EditText
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textSize="24sp"
+                android:padding="12dp"
+                android:hint="Add location"
+
+                android:drawableLeft="@drawable/ic_baseline_location_on_24"
+
+                android:textColorHint="@color/day"
+
+                android:layout_marginRight="20dp"
+                android:background="@drawable/corner_color"
+                android:id="@+id/dlocation"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:drawableLeft="@drawable/ic_baseline_date_range_24"
+                    android:layout_marginLeft="20dp"
+                    />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="140dp"
+                    android:layout_height="42dp"
+
+                    android:id="@+id/ddate"
+
+                    android:layout_marginLeft="5dp"
+                    android:textSize="25sp"
+                    android:text="kdjfhad"
+                    android:textColor="@color/day"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+
+
+                    android:drawableLeft="@drawable/ic_baseline_access_time_24"
+
+
+
+                    />
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="150dp"
+                    android:layout_height="42dp"
+
+                    android:id="@+id/dtime"
+
+                    android:layout_marginLeft="5dp"
+                    android:textSize="25sp"
+                    android:text="choose time"
+                    android:textColor="@color/day"
+
+                    android:layout_gravity="center_vertical"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+
+                    android:id="@+id/dsave"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/day"
+                    android:text="Save"
+
+                    android:textSize="22sp"
+
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
