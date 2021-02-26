@@ -253,8 +253,10 @@ public class DisplayActivity extends AppCompatActivity implements OnMapReadyCall
 
 
         LatLng ny = new LatLng(dd,d);
-        gmap.addMarker(new MarkerOptions().position(ny).title("PUNJAB"));
-        gmap.moveCamera(CameraUpdateFactory.newLatLng(ny));
+        gmap.addMarker(new MarkerOptions().position(ny).title("I am here!"));
+        //gmap.moveCamera(CameraUpdateFactory.newLatLng(ny));
+        float zoomLevel=(float)15.0;
+        gmap.moveCamera(CameraUpdateFactory.newLatLngZoom(ny,zoomLevel));
     }
 }
 

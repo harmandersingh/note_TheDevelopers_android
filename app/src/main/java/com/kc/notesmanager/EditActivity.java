@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.location.LocationManager;
@@ -159,14 +160,14 @@ public class EditActivity extends AppCompatActivity {
 
 
         Intent intent=getIntent();
-   /*     if(getIntent().hasExtra("byteArray"))
+        if(getIntent().hasExtra("byteArray"))
         {
             Bitmap bitmap= BitmapFactory.decodeByteArray(getIntent().getByteArrayExtra("byteArray"),
                     0,getIntent().getByteArrayExtra("byteArray").length);
             imageView.setImageBitmap(bitmap);
 
         }
-*/
+
         String title1=    intent.getStringExtra("title");
         String subject1=    intent.getStringExtra("subject");
         String location1=    intent.getStringExtra("loaction");
@@ -214,8 +215,13 @@ public class EditActivity extends AppCompatActivity {
                 String date=dae1.getText().toString();
                 String time=tme1.getText().toString();
                 String notes=nots1.getText().toString();
-               Bitmap image=imagetoStore;
+                Bitmap image;
+               if(imagetoStore==null){
 
+                    image =((BitmapDrawable)imageView.getDrawable()).getBitmap();
+               }else {
+                    image = imagetoStore;
+               }
 
 
 
