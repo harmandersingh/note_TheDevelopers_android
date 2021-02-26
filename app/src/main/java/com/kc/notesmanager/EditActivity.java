@@ -190,8 +190,9 @@ public class EditActivity extends AppCompatActivity {
 
                 try {
                     Intent objectintent=new Intent();
-                    objectintent.setType("Image/*");
-                    objectintent.setAction(Intent.ACTION_GET_CONTENT);
+                    objectintent.setAction(Intent.ACTION_PICK);
+
+                    objectintent.setType("image/*");
 
                     startActivityForResult(objectintent,PICK_IMAGE_REQUEST);
                 }
